@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chun Tao – AI Cloud Systems & Solutions Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Portfolio of Chun Tao, AI Cloud Systems and Solutions Engineer specializing in LLM and multimodal applications on Intel Gaudi accelerators and GPUs."
+  />
+  <style>
+    :root {
+      --bg: #050816;
+      --bg-alt: #0b1020;
+      --card-bg: #0f172a;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.1);
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2937;
+      --radius-lg: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 50%, #000 90%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    header {
+      padding: 24px 20px 28px;
+      margin-bottom: 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #020617, #0b1120);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 24px 80px rgba(15, 23, 42, 0.8);
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 4vw, 2.6rem);
+      margin: 0 0 8px;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .pill-row {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--text-muted);
+      backdrop-filter: blur(10px);
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr);
+      gap: 24px;
+    }
+
+    @media (min-width: 900px) {
+      main {
+        grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+        align-items: flex-start;
+      }
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    .card {
+      padding: 18px 18px 20px;
+      border-radius: var(--radius-lg);
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.7);
+    }
+
+    .card + .card {
+      margin-top: 14px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin: 0 0 10px;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin: 0 0 4px;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .project-card {
+      padding: 12px 12px 12px;
+      border-radius: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 64, 175, 0.7);
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .project-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .project-link {
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .tags {
+      margin-top: 4px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.74rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.16);
+      border: 1px solid rgba(34, 197, 189, 0.35);
+      color: #a5f3fc;
+    }
+
+    .blog-list ul {
+      padding-left: 18px;
+      margin: 8px 0 0;
+    }
+
+    .blog-list li {
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .blog-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 0.9rem;
+      padding: 6px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="eyebrow">Portfolio</div>
+      <h1>Chun Tao</h1>
+      <p class="subtitle">
+        Hi! I'm Chun Tao, an AI Cloud Systems and Solutions Engineer – GPU &amp; Gaudi
+        Accelerator at Intel, based in Santa Clara, CA. I design and implement cloud
+        AI solutions leveraging Intel technologies, including the Gaudi AI Accelerator
+        and BattleMage GPU, with a focus on LLM and multimodal applications in
+        production environments.
+      </p>
+      <div class="pill-row">
+        <span class="pill">LLM &amp; Multimodal Systems</span>
+        <span class="pill">Intel Gaudi &amp; GPU Acceleration</span>
+        <span class="pill">Cloud AI Architecture</span>
+        <span class="pill">Performance Optimization</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left column: About + Projects -->
+      <div>
+        <section id="about">
+          <div class="card">
+            <h2>About Me</h2>
+            <p class="muted">
+              My journey began at Emory University, where I developed an interest in
+              engineering physics. This ignited my passion for Electrical and Computer
+              Engineering, leading me to transfer to Purdue ECE in my sophomore year.
+            </p>
+            <p class="muted">
+              At Purdue, I received comprehensive training across multiple ECE domains –
+              VLSI analog and digital circuit design, computer architecture, and
+              microprocessor systems and interfacing – completing my BSEE in just two
+              years through intensive coursework and labs.
+            </p>
+            <p class="muted">
+              I continued into a thesis-based MS under Prof. Kaushik Roy in the Purdue
+              NRL lab, studying AI fundamentals and hardware–software co-design for deep
+              learning accelerators. My research explored the trade-off between natural
+              accuracy and adversarial robustness of analog NVM crossbar circuits, later
+              extending to semantic reasoning of natural images.
+            </p>
+            <p class="muted">
+              With a growing focus on AI, especially computer vision and NLP, I interned
+              at automotive technology startups ClearMotion and Ample, building
+              perception systems using stereo cameras and LiDAR for localization,
+              segmentation, and pose estimation in autonomous driving and robotics.
+            </p>
+            <p class="muted">
+              Today at Intel, I specialize in AI applications for customers, including an
+              interactive avatar chatbot built with PyTorch and the Intel Gaudi software
+              stack, and I optimize and benchmark LLM workloads on Intel Tiber AI Cloud
+              and IBM/Denver clouds.
+            </p>
+          </div>
+        </section>
+
+        <section id="projects">
+          <div class="card">
+            <h2>Selected Projects &amp; Publications</h2>
+            <div class="projects-list">
+              <!-- Project 1 -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div class="project-title">
+                    Semantic-Syntactic Discrepancy in Images (SSDI): Learning
+                    Meaning and Order of Features from Natural Images
+                  </div>
+                  <a
+                    class="project-link"
+                    href="https://tmlr.infinite-conf.org/paper_pages/8otbGorZK2.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View paper →
+                  </a>
+                </div>
+                <div class="tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Image Reasoning</span>
+                </div>
+              </article>
+
+              <!-- Project 2 -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div class="project-title">
+                    On Noise Stability and Robustness of Adversarially Trained
+                    Networks on NVM Crossbars
+                  </div>
+                  <a
+                    class="project-link"
+                    href="https://ieeexplore.ieee.org/abstract/document/9842342"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View paper →
+                  </a>
+                </div>
+                <div class="tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">Adversarial Robustness</span>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Hardware Accelerators</span>
+                </div>
+              </article>
+
+              <!-- Project 3 -->
+              <article class="project-card">
+                <div class="project-header">
+                  <div class="project-title">
+                    Create an AI Avatar Talking Bot with PyTorch and OPEA
+                  </div>
+                  <a
+                    class="project-link"
+                    href="https://www.intel.com/content/www/us/en/developer/articles/technical/ai-avatar-talking-bot-with-pytorch-and-opea.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View article →
+                  </a>
+                </div>
+                <div class="tags">
+                  <span class="tag">AI</span>
+                  <span class="tag">Audio Chatbot</span>
+                  <span class="tag">Computer Vision</span>
+                  <span class="tag">Multimodal RAG</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right column: Blog / Meta -->
+      <aside class="sidebar">
+        <section id="blog">
+          <div class="card blog-list">
+            <h2>Learning Blog</h2>
+            <p class="muted">
+              Welcome to my learning blog. I document my exploration of
+              cutting-edge AI technologies and software development, including:
+            </p>
+            <ul>
+              <li>Deep dives into Intel Gaudi accelerators and software stack</li>
+              <li>AWS cloud architecture and production deployment patterns</li>
+              <li>Programming challenges (e.g., LeetCode) and problem solving</li>
+              <li>
+                Research notes from my work on AI hardware–software co-design and
+                image reasoning
+              </li>
+            </ul>
+            <!-- If you later host blog posts on GitHub Pages, change this link -->
+            <a class="blog-cta" href="#blog">
+              Blog posts coming soon
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="card">
+            <h2>Contact</h2>
+            <p class="muted">
+              Feel free to reach out for collaboration on AI systems, LLM
+              performance engineering, or applied research.
+            </p>
+            <p class="muted">
+              You can add links here to your GitHub, LinkedIn, email, or other
+              public profiles once this site is live.
+            </p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Chun Tao. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
